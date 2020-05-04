@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Tabbr",
+  "version": "0.1",
+  "description": "Open links in a new tab",
+  "icons": {
+    "16": "imgs/16.png",
+    "32": "imgs/32.png",
+    "48": "imgs/48.png",
+    "128": "imgs/128.png"
+  },
+  "browser_action": {
+    "default_icon": "imgs/16.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content.js"]
+  }]
+}
